@@ -25,7 +25,7 @@ public class HW_1 {
         System.out.println(n);
 
 
-                // Найти все кратные n числа в диапазоне от i до Short.MAX_VALUE сохранить в массив m1
+        // Найти все кратные n числа в диапазоне от i до Short.MAX_VALUE сохранить в массив m1
                 for (int y = i; y <= Short.MAX_VALUE; y++) {
                     if (y % i == 0) {
                         m1[array1] = y;
@@ -33,7 +33,7 @@ public class HW_1 {
                     }
                 }
 
-                // Найти все некратные n числа в диапазоне от Short.MIN_VALUE до i и сохранить в массив m2
+        // Найти все некратные n числа в диапазоне от Short.MIN_VALUE до i и сохранить в массив m2
                 for (int y = i; y <= Short.MIN_VALUE; y++) {
                     if (y % i != 0) {
                         m2[array2] = y;
