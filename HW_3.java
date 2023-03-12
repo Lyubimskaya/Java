@@ -45,16 +45,18 @@ public class HW_3 {
 
         // 7. Поиска элемента в списке по строке.
 
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Введи название цвета по английски и с большой буквы (например: Pink): ");
-        String findColor = new String(scanner.nextLine());
+        try (Scanner scanner = new Scanner(System.in)) {
+            System.out.println("Введи название цвета по английски и с большой буквы (например: Pink): ");
+            String findColor = new String(scanner.nextLine());
 
-        List<String> resElem = colors.stream()
-                .filter(color -> color.contains(findColor))
-                .collect(Collectors.toList());
-        if (resElem.size() > 0) {
-            System.out.println("Задание 7: " + "Element: " + resElem);
-        } else System.out.println("Задание 7: " + "Такого элемента нет");
+            List<String> resElem = colors.stream()
+                    .filter(color -> color.contains(findColor))
+                    .collect(Collectors.toList());
+            if (resElem.size() > 0) {
+                System.out.println("Задание 7: " + "Element: " + resElem);
+            } else System.out.println("Задание 7: " + "Такого элемента нет");
+        }
+        
 
         // 8. Создать новый список и добавить в него несколько елементов первого списка.
 
